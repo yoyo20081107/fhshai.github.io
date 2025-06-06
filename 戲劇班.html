@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>臺北市復興高中</title>
+  <style>
+    @font-face {
+      font-family: 'DFHeiBold-B5';
+      src: url('DFHeiBold-B5.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'DFHeiBold-B5', sans-serif;
+      background-color: #fff;
+      color: #353E2D;
+      transform-origin: top left;
+    }
+
+    .container {
+      width: 1366px;
+      min-height: 768px;
+      overflow-x: hidden;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .school-name {
+      font-size: 24px;
+      color: #353E2D;
+    }
+
+    .right-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .cart-icon {
+      color: #353E2D;
+      cursor: pointer;
+    }
+
+    .signup-button {
+      background-color: #81A775;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .divider {
+      width: 80%;
+      height: 2px;
+      background-color: #353E2D;
+      margin: 40px auto;
+    }
+
+    .product-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .product-image {
+      width: 200px;
+      height: 200px;
+      background-color: #eee;
+      margin: 0 auto;
+    }
+
+    .school-main-title {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .school-sub-title {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .rating {
+      font-size: 18px;
+      color: #FFD058;
+      margin-top: 10px;
+    }
+
+    .star {
+      color: #FFD058;
+      font-size: 18px;
+    }
+
+    .details-buy-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .details-label {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .buy-button {
+      background-color: #D62E2E;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .product-description {
+      padding: 40px 60px;
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .placeholder-image {
+      width: 100%;
+      height: 300px;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0;
+      font-size: 24px;
+      color: #666;
+    }
+  </style>
+  <script>
+    function scalePage() {
+      const scale = window.innerWidth / 1366;
+      document.body.style.transform = `scale(${scale})`;
+    }
+    window.addEventListener('resize', scalePage);
+    window.addEventListener('load', scalePage);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="left-header">
+        <img src="your-icon.png" alt="學校圖標" width="40" height="40">
+        <div class="school-name">臺北市復興高中</div>
+      </div>
+      <div class="right-header">
+        <div class="cart-icon" onclick="window.location.href='https://www.youtube.com/watch?v=example'">🛒</div>
+        <a class="signup-button" href="https://www.fhsh.tp.edu.tw/" target="_blank">Sing up</a>
+      </div>
+    </header>
+
+    <div class="divider"></div>
+
+    <div class="product-section">
+      <div class="product-image">[圖片留位]</div>
+      <div class="school-main-title">臺北市立復興高中</div>
+      <div class="school-sub-title">(Taipei Municipal Fuxing High School)</div>
+      <div class="rating">(5.0/5.0) <span class="star">★★★★★</span></div>
+      <div class="details-buy-container">
+        <div class="details-label">商品詳情</div>
+        <div class="buy-button">Buy</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="product-description">
+      戲如人生，敢演，就敢成為！<br>
+      復興高中戲劇班專為熱愛表演、喜歡創作的你而設計，讓你在燈光下找到自信。是否渴望用聲音與情感打動人心？是否積攢了許多天馬行空的想法卻找不到實踐的地方？<br>
+      復興高中戲劇班正是你夢想啟航的地方！<br>
+      課程結合表演、編劇、舞台設計、舞蹈、戲曲、影像製作與舞台化妝。每年還有三場對外公演，讓你站上舞台實戰演出，展現才華。由國內外專業師資親自指導，無論你想走藝術升學、影視表演或劇場創作，復興高中都是你的最佳首選！
+    </div>
+
+    <footer style="text-align: center; padding: 40px; font-size: 16px; color: #353E2D;">
+      電話：(02) 2891-4131<br>
+      傳真：(02) 2895-2156<br>
+      學校地址：112056 
+      臺北市北投區復興四路 70 號
+    </footer>
+  </div>
+</body>
+</html>
