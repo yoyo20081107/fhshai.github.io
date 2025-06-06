@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>臺北市復興高中</title>
+  <style>
+    @font-face {
+      font-family: 'DFHeiBold-B5';
+      src: url('DFHeiBold-B5.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'DFHeiBold-B5', sans-serif;
+      background-color: #fff;
+      color: #353E2D;
+      transform-origin: top left;
+    }
+
+    .container {
+      width: 1366px;
+      min-height: 768px;
+      overflow-x: hidden;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .school-name {
+      font-size: 24px;
+      color: #353E2D;
+    }
+
+    .right-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .cart-icon {
+      color: #353E2D;
+      cursor: pointer;
+    }
+
+    .signup-button {
+      background-color: #81A775;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1366 / 443;
+      margin-top: 20px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 32px;
+      font-weight: bold;
+      color: #353E2D;
+    }
+
+    .sub-image-section {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .sub-image-section img {
+      width: 60%;
+      height: auto;
+    }
+
+    .about-text {
+      margin-top: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #353E2D;
+    }
+
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .class-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #353E2D;
+    }
+
+    .class-item img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .class-item a {
+      color: #353E2D;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .divider {
+      width: 80%;
+      height: 2px;
+      background-color: #353E2D;
+      margin: 40px auto;
+    }
+
+    footer {
+      text-align: center;
+      padding-bottom: 40px;
+      font-size: 16px;
+      color: #353E2D;
+    }
+  </style>
+  <script>
+    function scalePage() {
+      const scale = window.innerWidth / 1366;
+      document.body.style.transform = `scale(${scale})`;
+    }
+    window.addEventListener('resize', scalePage);
+    window.addEventListener('load', scalePage);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="left-header">
+        <img src="your-icon.png" alt="學校圖標" width="40" height="40">
+        <div class="school-name">臺北市復興高中</div>
+      </div>
+      <div class="right-header">
+        <div class="cart-icon">🛒</div>
+        <a class="signup-button" href="https://www.fhsh.tp.edu.tw/" target="_blank">Sing up</a>
+      </div>
+    </header>
+
+    <div class="hero">
+      <img src="your-hero-image.jpg" alt="主視覺圖">
+      <div class="hero-text">一所創新自我、夢想啟航的學校</div>
+    </div>
+
+    <div class="sub-image-section">
+      <img src="your-second-image.jpg" alt="次要圖">
+      <div class="about-text">關於本校</div>
+    </div>
+
+    <div class="class-grid">
+      <div class="class-item">
+        <img src="music.jpg" alt="音樂班">
+        <a href="music.html">音樂班</a>
+      </div>
+      <div class="class-item">
+        <img src="dance.jpg" alt="舞蹈班">
+        <a href="dance.html">舞蹈班</a>
+      </div>
+      <div class="class-item">
+        <img src="drama.jpg" alt="戲劇班">
+        <a href="drama.html">戲劇班</a>
+      </div>
+      <div class="class-item">
+        <img src="sport.jpg" alt="體育班">
+        <a href="sport.html">體育班</a>
+      </div>
+      <div class="class-item">
+        <img src="art.jpg" alt="美術班">
+        <a href="art.html">美術班</a>
+      </div>
+      <div class="class-item">
+        <img src="ai.jpg" alt="AI資安學程">
+        <a href="ai.html">AI資安學程</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <footer>
+      電話：(02) 2891-4131、傳真：(02) 2895-2156、<br>
+      學校地址：112056 、臺北市北投區復興四路 70 號
+    </footer>
+  </div>
+</body>
+</html>
