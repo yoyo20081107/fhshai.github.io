@@ -1,97 +1,214 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>點擊按鈕播放影片</title>
-    <style>
-        /* CSS 樣式 (可選，用於美化和隱藏影片) */
-        .video-container {
-            display: none; /* 預設隱藏影片區塊 */
-            margin-top: 20px;
-        }
-        .buy-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .buy-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>臺北市復興高中</title>
+  <style>
+    @font-face {
+      font-family: 'DFHeiBold-B5';
+      src: url('DFHeiBold-B5.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'DFHeiBold-B5', sans-serif;
+      background-color: #fff;
+      color: #353E2D;
+      transform-origin: top left;
+    }
+
+    .container {
+      width: 1366px;
+      min-height: 768px;
+      overflow-x: hidden;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .school-name {
+      font-size: 24px;
+      color: #353E2D;
+    }
+
+    .right-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .cart-icon {
+      color: #353E2D;
+      cursor: pointer;
+    }
+
+    .signup-button {
+      background-color: #81A775;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .divider {
+      width: 80%;
+      height: 2px;
+      background-color: #353E2D;
+      margin: 40px auto;
+    }
+
+    .product-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .product-image {
+      width: 200px;
+      height: 200px;
+      background-color: #eee;
+      margin: 0 auto;
+    }
+
+    .school-main-title {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .school-sub-title {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .rating {
+      font-size: 18px;
+      color: #FFD058;
+      margin-top: 10px;
+    }
+
+    .star {
+      color: #FFD058;
+      font-size: 18px;
+    }
+
+    .details-buy-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .details-label {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .buy-button {
+      background-color: #D62E2E;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .product-description {
+      padding: 40px 60px;
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .placeholder-image {
+      width: 100%;
+      height: 300px;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0;
+      font-size: 24px;
+      color: #666;
+    }
+  </style>
+  <script>
+    function scalePage() {
+      const scale = window.innerWidth / 1366;
+      document.body.style.transform = `scale(${scale})`;
+    }
+    window.addEventListener('resize', scalePage);
+    window.addEventListener('load', scalePage);
+  </script>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div class="left-header">
+        <img src="校徽.jpg" alt="學校圖標" width="40" height="40">
+        <a class="school-name" href="https://yoyo20081107.github.io/fhshai.github.io/" target="_blank">臺北市復興高中</a>
+      </div>
+      <div class="right-header">
+        <div class="cart-icon" onclick="window.location.href='https://www.youtube.com/watch?v=example'"><img src="購物車.jpg" width="40" height="40"></div>
+        <a class="signup-button" a href="https://www.fhsh.tp.edu.tw/" target="_blank">Sing up</a>
+      </div>
+    </header>
 
-    <div class="buy-button" id="playVideoButton">Buy</div>
+    <div class="divider"></div>
 
-    <div class="video-container" id="youtubeVideoContainer">
+    <div class="product-section">
+      <img src="校門口_正面.jpg>
+      <div class="school-main-title">臺北市立復興高中</div>
+      <div class="school-sub-title">(Taipei Municipal Fuxing High School)</div>
+      <div class="rating">(5.0/5.0) <span class="star">★★★★★</span></div>
+      <div class="details-buy-container">
+        <div class="details-label">商品詳情</div>
         <iframe width="640" height="360"
-        src="https://www.youtube.com/embed/VIDEO_ID_HERE?enablejsapi=1"
+        src="https://www.youtube.com/embed/5O2-UxmJmQo?autoplay=1&mute=1"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
         </iframe>
+        <div class="buy-button">Buy</div>
+      </div>
     </div>
 
-    <script>
-        // 1. 取得 DOM 元素
-        const playButton = document.getElementById('playVideoButton');
-        const videoContainer = document.getElementById('youtubeVideoContainer');
-        const youtubeIframe = videoContainer.querySelector('iframe');
-        let player; // 用於儲存 YouTube 播放器物件
+    <div class="divider"></div>
 
-        // 2. 載入 YouTube IFrame Player API
-        // 這段程式碼會非同步載入 YouTube IFrame Player API 的 JavaScript 檔案
-        // 詳細資訊請參考：https://developers.google.com/youtube/iframe_api_reference
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player(youtubeIframe, {
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
+    <div class="product-description">
+      高中，不只是讀書，更是創造奇蹟得時刻！<br>
+      擔心高中會孤單？在復興高中，你會被滿滿的熱情給包圍！各個社團就像大家庭，等著你加入。<br>
+      就算學習不行，也能通過其他的技藝來彌補，這裡有戲劇班、藝才班，讓你在舞台上發光發熱！這裡也有足足41個社團能挑選！不管是流行歌、跳舞、玩麥塊，總有一個社團是你的最佳好處所。<br>
+      知識不僅存在於書本！復興高中的國，讓學生有機會實地參訪國外校園。國際交流的機會為你打開一扇通往世界的大門！我們與加拿大布萊斯學院（Blyth Academy）等海外學校締結姊妹校，並舉辦赴日教育旅行與多元文化活動。每一次的交流，都是會成為你學習與成長的養分。
+    </div>
 
-        function onPlayerReady(event) {
-            // 當播放器準備好時會呼叫此函數
-            // 你可以在這裡做一些初始化操作
-        }
+    <img src="復興高中.jpg>
 
-        function onPlayerStateChange(event) {
-            // 當播放器狀態改變時會呼叫此函數
-            // 例如：播放 (1), 暫停 (2), 結束 (0) 等
-        }
+    <div class="product-description">
+      資安不只在新聞上看到的！在復興高中資安班，你將不只是網路使用者，更是數位世界的守護者，比起其他人，讓你多了更多工作的機會，高中三年就打下堅實基礎！<br>
+      唸書是條路，興趣也是路，在復興，你可以勇敢選擇做自己，找到自己的閃光點。
+    </div>
 
-        // 3. 監聽按鈕點擊事件
-        playButton.addEventListener('click', () => {
-            // 顯示影片容器
-            videoContainer.style.display = 'block';
-
-            // 檢查播放器是否已經準備好，如果還沒，等待 API 載入完成
-            if (player && typeof player.playVideo === 'function') {
-                player.playVideo(); // 播放影片
-            } else {
-                // 如果 API 還沒載入或播放器還沒準備好，則載入 API 並等待
-                // 這通常只會在第一次點擊時發生
-                if (!window.YT) { // 檢查 YT 物件是否已存在
-                    const tag = document.createElement('script');
-                    tag.src = "https://www.youtube.com/iframe_api";
-                    const firstScriptTag = document.getElementsByTagName('script')[0];
-                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                }
-                // 由於 onYouTubeIframeAPIReady 會在 API 載入後自動呼叫，
-                // 播放邏輯會在 onPlayerReady 中處理或在 player 準備好後手動調用。
-                // 這裡我們假設 player 物件會正確地在 onYouTubeIframeAPIReady 準備好。
-                // 如果需要自動播放，通常會在 onPlayerReady 中調用 playVideo()。
-                // 但因為是使用者點擊後才載入，所以在這裡確保顯示即可。
-            }
-        });
-    </script>
+    <footer style="text-align: center; padding: 40px; font-size: 16px; color: #353E2D;">
+      電話：(02) 2891-4131
+      傳真：(02) 2895-2156、<br>
+      學校地址：112056 
+      臺北市北投區復興四路 70 號
+    </footer>
+  </div>
 </body>
 </html>
+<a href="https://www.youtube.com/watch?v=5O2-UxmJmQo">點我前往 Example 網站</a>
