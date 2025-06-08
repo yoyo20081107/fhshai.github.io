@@ -29,35 +29,39 @@
 
     header {
       display: flex;
-      justify-content: center; /* 讓內容水平居中 */
+      /* 調整為 space-between 讓左右元素分開，中間標題可佔據空間 */
+      justify-content: space-between; 
       align-items: center;
-      /* 調整 padding-top 增加上方空間，padding-bottom 保持不變 */
-      padding: 50px 0 20px 0; /* 上方 50px, 左右 0, 下方 20px */
+      /* 調整 padding-top 增加上方空間 */
+      padding: 50px 40px 20px 40px; /* 上方 50px, 左右 40px, 下方 20px */
       width: 100%; /* 確保佔滿寬度 */
       box-sizing: border-box; /* 讓 padding 不會增加總寬度 */
-      /* 移除固定的 height，讓 padding 來控制高度 */
-      /* height: 80px; */ 
     }
 
-    /* 隱藏左側的校徽和原本的學校名稱文字 */
     .left-header {
-      display: none; 
+      display: flex; /* 讓校徽和連結並排顯示 */
+      align-items: center;
+      gap: 10px; /* 校徽和連結之間的間距 */
     }
 
-    /* 將學校名稱作為大標題 */
+    /* 將學校名稱作為大標題，並調整使其在 flex 容器中適當顯示 */
     .main-title {
-      font-size: 72px; /* 字體進一步放大 */
+      font-size: 72px; /* 字體放大 */
       font-weight: bold; /* 加粗 */
       color: #353E2D;
       text-decoration: none; /* 移除底線 */
       text-align: center; /* 文字居中 */
-      width: 100%; /* 讓標題佔滿父容器的寬度 */
-      display: block; /* 確保佔滿一行 */
       letter-spacing: 5px; /* 增加字距 */
+      /* 讓 main-title 能夠彈性地佔據中間的剩餘空間 */
+      flex-grow: 1; 
+      margin: 0 20px; /* 與左右元素的間距 */
+      line-height: 1; /* 確保文字高度不會過高，避免擠壓 */
     }
 
     .right-header {
-      display: none; /* 暫時隱藏 */
+      display: flex; /* 讓購物車和按鈕並排顯示 */
+      align-items: center;
+      gap: 20px; /* 元素之間的間距 */
     }
 
     .cart-icon {
@@ -166,12 +170,12 @@
 <body>
   <div class="container">
     <header>
-     <div class="left-header">
+      <div class="left-header">
         <img src="校徽.jpg" alt="學校圖標" width="40" height="40">
-        <a class="school-name" a href="https://yoyo20081107.github.io/fhshai.github.io/" target="_blank">臺北市復興高中 </a>
       </div>
+      <a class="main-title" href="https://yoyo20081107.github.io/fhshai.github.io/" target="_blank">臺北市復興高中</a>
       <div class="right-header">
-        <img src="購物車.jpg" width="40" height="40"</div>
+        <img src="購物車.jpg" width="40" height="40">
         <a class="signup-button" href="https://www.fhsh.tp.edu.tw/" target="_blank">Sing up</a>
       </div>
     </header>
@@ -183,7 +187,7 @@
 
     <div class="sub-image-section">
       <img src="校門口_正面.jpg" alt="次要圖">
-      <a class="about-text" herf="復興高中.html">關於本校</a>
+       <a href="復興高中.html" target="_blank">關於本校</a>
     </div>
 
     <div class="class-grid">
