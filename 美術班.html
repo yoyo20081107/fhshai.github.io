@@ -175,13 +175,27 @@
       <div class="rating">(5.0/5.0) <span class="star">★★★★★</span></div>
       <div class="details-buy-container">
         <div class="details-label">商品詳情</div>
-        <iframe width="640" height="360"
-        src="https://www.youtube.com/embed/y3N6D7rPy0I"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-        </iframe>
+        <div class="details-buy-container">
+  <div class="details-label">商品詳情</div>
+  <div id="video-container"></div>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    setTimeout(() => {
+      const iframe = document.createElement('iframe');
+      iframe.width = "640";
+      iframe.height = "360";
+      iframe.src = "https://www.youtube.com/embed/y3N6D7rPy0I?autoplay=1&mute=1";
+      iframe.title = "YouTube video player";
+      iframe.frameBorder = "0";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+
+      document.getElementById('video-container').appendChild(iframe);
+    }, 500); // 延遲 0.5 秒插入 iframe（模擬使用者行為）
+  });
+</script>
       </div>
     </div>
 
