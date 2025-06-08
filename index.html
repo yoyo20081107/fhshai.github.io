@@ -14,7 +14,7 @@
       margin: 0;
       padding: 0;
       font-family: 'DFHeiBold-B5', sans-serif;
-      /* 將背景顏色從白色 (#fff) 改為淡米色 (#F5F5DC) */
+      /* 淡米色背景 */
       background-color: hsl(60, 100%, 98%); 
       color: #353E2D;
       transform-origin: top left;
@@ -29,26 +29,35 @@
 
     header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center; /* 讓內容水平居中 */
       align-items: center;
-      padding: 20px 40px;
+      /* 調整 padding-top 增加上方空間，padding-bottom 保持不變 */
+      padding: 50px 0 20px 0; /* 上方 50px, 左右 0, 下方 20px */
+      width: 100%; /* 確保佔滿寬度 */
+      box-sizing: border-box; /* 讓 padding 不會增加總寬度 */
+      /* 移除固定的 height，讓 padding 來控制高度 */
+      /* height: 80px; */ 
     }
 
+    /* 隱藏左側的校徽和原本的學校名稱文字 */
     .left-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      display: none; 
     }
 
-    .school-name {
-      font-size: 24px;
+    /* 將學校名稱作為大標題 */
+    .main-title {
+      font-size: 72px; /* 字體進一步放大 */
+      font-weight: bold; /* 加粗 */
       color: #353E2D;
+      text-decoration: none; /* 移除底線 */
+      text-align: center; /* 文字居中 */
+      width: 100%; /* 讓標題佔滿父容器的寬度 */
+      display: block; /* 確保佔滿一行 */
+      letter-spacing: 5px; /* 增加字距 */
     }
 
     .right-header {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+      display: none; /* 暫時隱藏 */
     }
 
     .cart-icon {
@@ -157,14 +166,7 @@
 <body>
   <div class="container">
     <header>
-     <div class="left-header">
-        <img src="校徽.jpg" alt="學校圖標" width="40" height="40">
-        <a class="school-name" a href="https://yoyo20081107.github.io/fhshai.github.io/" target="_blank">臺北市復興高中 </a>
-      </div>
-      <div class="right-header">
-        <img src="購物車.jpg" width="40" height="40"</div>
-        <a class="signup-button" href="https://www.fhsh.tp.edu.tw/" target="_blank">Sing up</a>
-      </div>
+      <a class="main-title" href="https://yoyo20081107.github.io/fhshai.github.io/" target="_blank">臺北市復興高中</a>
     </header>
 
     <div class="hero">
