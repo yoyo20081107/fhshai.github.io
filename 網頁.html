@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點擊按鈕播放影片</title>
+    <style>
+        .video-container {
+            display: none; 
+            margin-top: 20px;
+        }
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="buy-button" id="playVideoButton">Buy</div>
+
+    <div class="video-container" id="youtubeVideoContainer">
+        <iframe width="640" height="360"
+        src="https://www.youtube.com/embed/VIDEO_ID_HERE?enablejsapi=1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+        const playButton = document.getElementById('playVideoButton');
+        const videoContainer = document.getElementById('youtubeVideoContainer');
+        const youtubeIframe = videoContainer.querySelector('iframe');
+        let player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player(youtubeIframe, {
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+        }
+
+        function onPlayerStateChange(event) {
+        }
+
+        playButton.addEventListener('click', () => {
+            videoContainer.style.display = 'block';
+            if (player && typeof player.playVideo === 'function') {
+                player.playVideo();
+            } else {
+                if (!window.YT) { 
+                    const tag = document.createElement('script');
+                    tag.src = "https://www.youtube.com/iframe_api";
+                    const firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
